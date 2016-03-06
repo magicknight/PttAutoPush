@@ -14,60 +14,60 @@ def login(host, user ,password) :
     time.sleep(1)
     content = telnet.read_very_eager().decode('big5','ignore')
     if u"系統過載" in content :
-        print "系統過載, 請稍後再來"
+        print u"系統過載, 請稍後再來"
         sys.exit(0)
         
 
     if u"請輸入代號" in content:
-        print "輸入帳號中..."
+        print u"輸入帳號中..."
         telnet.write(user + "\r\n" )
         time.sleep(1)
-        print "輸入密碼中..."
+        print u"輸入密碼中..."
         telnet.write(password + "\r\n")
         time.sleep(5)
         content = telnet.read_very_eager().decode('big5','ignore')
         #print content
         if u"密碼不對" in content:
-           print "密碼不對或無此帳號。程式結束"
+           print u"密碼不對或無此帳號。程式結束"
            sys.exit()
            content = telnet.read_very_eager().decode('big5','ignore')
         if u"您想刪除其他重複登入" in content:
-           print '刪除其他重複登入的連線....'
+           print u'刪除其他重複登入的連線....'
            telnet.write("y\r\n")
            time.sleep(10)
            content = telnet.read_very_eager().decode('big5','ignore')
         if u"請按任意鍵繼續" in content:
-           print "資訊頁面，按任意鍵繼續..."
+           print u"資訊頁面，按任意鍵繼續..."
            telnet.write("\r\n" )
            time.sleep(2)
            content = telnet.read_very_eager().decode('big5','ignore')
         if u"您要刪除以上錯誤嘗試" in content:
-           print "刪除以上錯誤嘗試..."
+           print u"刪除以上錯誤嘗試..."
            telnet.write("y\r\n")
            time.sleep(5)
            content = telnet.read_very_eager().decode('big5','ignore')
         if u"您有一篇文章尚未完成" in content:
-           print '刪除尚未完成的文章....'
+           print u'刪除尚未完成的文章....'
            # 放棄尚未編輯完的文章
            telnet.write("q\r\n")   
            time.sleep(5)   
            content = telnet.read_very_eager().decode('big5','ignore')
         print "----------------------------------------------"
-        print "------------------ 登入完成 ------------------"
+        print u"------------------ 登入完成 ------------------"
         print "----------------------------------------------"
         
     else:
-        print "沒有可輸入帳號的欄位，網站可能掛了"
+        print u"沒有可輸入帳號的欄位，網站可能掛了"
 
 def disconnect() :
-     print "登出中..."
+     print u"登出中..."
      # q = 上一頁，直到回到首頁為止，g = 離開，再見
      telnet.write("qqqqqqqqqg\r\ny\r\n" )
      time.sleep(3)
      #content = telnet.read_very_eager().decode('big5','ignore')
      #print content
      print "----------------------------------------------"
-     print "------------------ 登出完成 ------------------"
+     print u"------------------ 登出完成 ------------------"
      print "----------------------------------------------"
      telnet.close()
 
@@ -81,7 +81,7 @@ def post(board, push, index, tag) :
         time.sleep(1)        
         reset_count = 0;      
         while 1 : 
-           print '機器人推文中...'
+           print u'機器人推文中...'
            if(reset_count == index):
               reset_count = 0 ;
               telnet.write('$') ; # "$" = End = 到最末頁
@@ -112,16 +112,16 @@ def post(board, push, index, tag) :
            telnet.write('p') # 'p' = 方向鍵的上
            reset_count += 1;
         print "----------------------------------------------"
-        print '自動推文完成...'
+        print u'自動推文完成...'
         print "----------------------------------------------"
  
 
 def main():
     login(host, user ,password)    
 
-    #python PttAutoPush.py gossiping  board  index tag
+    #python PttAutoPush.py [版名] [內容] [標題數] [推文tag]
     #python PttAutoPush.py gossiping '別再發文了，趕快出門運動吧'  10 1
-    board, push, index, tag = sys.argv[1],sys.argv[2].decode('utf-8'),int(sys.argv[3]),sys.argv[4]
+    board, push, index, tag = sys.argv[1],sys.argv[2].decode(sys.getfilesystemencoding()),int(sys.argv[3]),sys.argv[4]
     post(board, push, index, tag)
     #disconnect()     
        
