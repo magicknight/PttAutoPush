@@ -25,7 +25,7 @@ $ python PttAutoPush.py [版名] [內容] [標題數] [推文tag]
 
 [版名] : 不分大小寫，EX. gossiping
 
-[內容] : 推文內容，內容須加上 " "，EX. "推文測試"
+[內容] : 推文內容
 
 [標題數] : 對最新的[標題數]筆文章推文，不包含至底文
 
@@ -43,7 +43,7 @@ Python 2.7.3
 ## 執行範例 
 
 ``` 
-$ python PttAutoPush.py gossiping '別再發文了，趕快出門運動吧'  10 1
+$ python PttAutoPush.py gossiping 別再發文了，趕快出門運動吧  10 1
 ```
 
 該範例為在PTT gossiping(八卦)板  自動對最新的10篇文章推文
