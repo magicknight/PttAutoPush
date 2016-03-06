@@ -107,7 +107,7 @@ def post(board, push, index, tag) :
                     telnet.write( (push+'\r\ny\r\n').encode('big5') )     
            else: 
                telnet.write('\r\n') 
-
+           content = ''
            time.sleep(3)  
            telnet.write('p') # 'p' = 方向鍵的上
            reset_count += 1;
