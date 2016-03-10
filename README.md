@@ -9,7 +9,7 @@ PTT自動推文 推文機器人(Python) For Linux and Windows
 ## 使用方法
 
 * [Demo Video](https://www.youtube.com/watch?v=vyLUPSfCprc) - Linux 
-* [Demo Video](https://youtu.be/eRA4m2rRIDw) - Windows (待新增)
+* [Demo Video](https://youtu.be/eRA4m2rRIDw) - Windows
 
 請將下列程式碼修改為自己的PTT ID 以及 Password
 
