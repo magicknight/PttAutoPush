@@ -44,9 +44,9 @@ $ python PttAutoPush.py gossiping 別再發文了，趕快出門運動吧  10 1
 輸出 (使用pcman觀看)
 ![alt tag](http://i.imgur.com/hgKup56.jpg)
 
-##執行環境
-Ubuntu 12.04
-Python 2.7.3
+## 執行環境
+* Ubuntu 12.04
+* Python 2.7.3
 
 ## License
 MIT license
