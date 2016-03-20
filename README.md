@@ -40,9 +40,9 @@ $ python PttAutoPush.py gossiping 別再發文了，趕快出門運動吧  10 1
 除非使用 任何軟體登入PTT，使程式執行錯誤 或 輸入Ctrl + C '強制終止程式
 
 ## 執行過程
-![alt tag](http://i.imgur.com/sRMIyag.jpg)
+![alt tag](http://i.imgur.com/sRMIyag.jpg)<b>
 輸出 (使用pcman觀看)
-![alt tag](http://i.imgur.com/hgKup56.jpg)
+![alt tag](http://i.imgur.com/hgKup56.jpg)<b>
 
 ## Environment
 * Ubuntu 12.04
