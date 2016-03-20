@@ -31,7 +31,7 @@ $ python PttAutoPush.py [版名] [內容] [標題數] [推文tag]
 ``` 
 $ python PttAutoPush.py gossiping 別再發文了，趕快出門運動吧  10 1
 ```
-該範例為在PTT gossiping(八卦)板  自動對最新的10篇文章推文（不包含至底文）
+該範例為在PTT gossiping(八卦)板  自動對最新的10篇文章推文（不包含至底文)
 
 推文的內容為 別再發文了，趕快出門運動吧 (推文內容不要有空白或特殊字元)
 
@@ -40,9 +40,11 @@ $ python PttAutoPush.py gossiping 別再發文了，趕快出門運動吧  10 1
 除非使用 任何軟體登入PTT，使程式執行錯誤 或 輸入Ctrl + C '強制終止程式
 
 ## 執行過程
-![alt tag](http://i.imgur.com/sRMIyag.jpg)<b>
-輸出 (使用pcman觀看)
-![alt tag](http://i.imgur.com/hgKup56.jpg)<b>
+![alt tag](http://i.imgur.com/sRMIyag.jpg)
+
+## 輸出結果 
+使用pcman觀看
+![alt tag](http://i.imgur.com/hgKup56.jpg)
 
 ## Environment
 * Ubuntu 12.04
